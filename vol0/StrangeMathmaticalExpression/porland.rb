@@ -18,13 +18,16 @@ def calc(stack, args, operation)
 end
 
 stack = Array.new()
-ARGV.length.times{|i|
-  arg = ARGV[i]
-  if arg =~ /^\d+/ # check arg is num or not
-    stack.push(arg.to_f)
-  else
-    calc(stack, pop_args(stack), arg)
-  end
-}
-
+while arg_array = gets
+  arg_array = arg_array[0..-2].split()
+  arg_array.length.times{|i|
+    arg = arg_array[i]
+    if arg =~ /^\d+/ # check arg is num or not
+      stack.push(arg.to_f)
+    else
+      calc(stack, pop_args(stack), arg)
+    end
+  }
 puts "%6f" % stack.pop()
+end
+
