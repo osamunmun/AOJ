@@ -1,0 +1,7 @@
+module Input
+
+  def input2intarr()
+    array = gets
+    array.map(&:to_i)
+  end
+end
