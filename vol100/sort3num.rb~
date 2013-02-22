@@ -1,0 +1,5 @@
+#!/bin/ruby 
+
+arr = gets
+arr.split.map(&:to_i)
+puts arr.sort.join(" ")

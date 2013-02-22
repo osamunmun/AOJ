@@ -1,0 +1,13 @@
+#!/bin/ruby 
+
+i = 0
+array = Array.new
+while (s = gets) && (i != 9)
+  array.push(s[0..-2].to_i)
+  i = i + 1
+end
+
+array.sort!
+3.times {
+  puts array.pop
+}

@@ -1,0 +1,6 @@
+#!/bin/ruby 
+
+while s = gets
+  input = s.split.map(&:to_i)
+  puts input.sort!.join(" ")
+end
